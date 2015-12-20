@@ -1,0 +1,12 @@
+{
+  "name": "BeerMeKC",
+  "app_id": "",
+  "proxies": [{
+    "path": "/api/validate-user",
+    "proxyUrl": "https://localhost:3000/api/users"
+  },{
+    "path": "/api/get-all-beers",
+    "proxyUrl": "https://api.brewerydb.com/v2/locations?key=fd038434276f4a9e7d6a19ee2d8aa5b5&locality=Kansas%20City"
+  }]
+
+}

@@ -1,0 +1,61 @@
+<ion-view view-title="{{brewery.brewery.name}}">
+    <ion-content style="overflow-y: scroll">
+        <div>
+            <div class="col">
+                <div class='row'>
+                    <div id="brewHeader"><img ng-src="{{brewery.brewery.images.medium}}" alt="" />
+                        <h1 style="color: #0c63ee">{{brewery.brewery.name}}</h1></div>
+                </div>
+
+            </div>
+            <div class="col">
+                <p id="breweryDescription">{{brewery.brewery.description}}</p>
+            </div>
+        </div>
+
+        <div class="row" id="breweryMap"></div>
+
+        <!--
+        <div id="breweryTable" style="overflow-y: scroll">
+            <div class="row">
+                <h2>Our Beers</h2></div>
+            <div class="row" style="border-bottom: #0c63ee 2px solid; margin-bottom: 2px;">
+                <div class="col" style="font-weight: bold">Name</div>
+                <div class="col" style="font-weight: bold">Style</div>
+                <div class="col" style="font-weight: bold; text-align: center;">ABV (%)</div>
+                <div class="col" style="font-weight: bold; text-align: center;">Image</div>
+            </div>
+            <div class="row" ng-repeat="beer in beers track by beer.id">
+                <div class="col">{{beer.name}}</div>
+                <div class="col">{{beer.style.name}}</div>
+                <div class="col">{{beer.abv}}</div>
+                <div class="col"><img ng-src="{{beer.labels.bmkc}}" id="beerListImg" /></div>
+            </div>
+        </div>
+-->
+        <table id="breweryTable" style="width: 100%">
+            <tr class="row" style="border-bottom: white 4px double;">
+                <td  id="beerListHead">--Our Beers--<br></td>
+            </tr>
+            <tr class='row' style="border-bottom: white 2px solid; margin-bottom: 2px;">
+                <td class='col' style="font-weight: bold; font-size: 16px;">Name</td>
+                <td class='col' style="font-weight: bold; font-size: 16px;">Style</td>
+                <td class='col' style="font-weight: bold; text-align: center; font-size: 16px;">ABV (%)</td>
+                <!--                        <td class='col' style="font-weight: bold">Rating</td>-->
+                <td class='col' style="font-weight: bold; text-align: center; font-size: 16px;">Image</td>
+            </tr>
+
+            <tr class='row' ng-repeat="beer in beers track by beer.id" style="border-bottom: white dotted 1px">
+                <td class='col'>{{beer.name}}</td>
+                <td class='col'>{{beer.style.name}}</td>
+                <td class='col' style="text-align: center">{{beer.abv}}</td>
+                <!--                        <td class='col' style="...">-</td>-->
+                <td class='col'> <img ng-src="{{beer.labels.bmkc}}" id="beerListImg" /></td>
+
+            </tr>
+
+        </table>
+
+
+    </ion-content>
+</ion-view>

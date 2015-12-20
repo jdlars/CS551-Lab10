@@ -1,0 +1,16 @@
+<ion-view view-title="Breweries">
+    <ion-content style="overflow-y: scroll">
+        <div class="row" style="background-color: #6ea4f7">
+            <div class="col" style="background-color: #6ea4f7"></div>
+            <div class="col">
+                <ion-list>
+                    <ion-item ng-repeat="brewery in breweries | orderBy: 'brewery.name'" href="#/app/breweries/{{brewery.breweryId}}" ng-click="passBreweryToBreweryView(brewery)" id="breweriesItem">
+                        <div class="row" style="text-align: center;"><img id="breweriesImg" ng-src="{{brewery.brewery.images.icon}}" style="height: 64px; width: 64px;" />
+                            <h2 id="breweriesName">{{brewery.brewery.name}}</h2></div>
+                    </ion-item>
+                </ion-list>
+            </div>
+            <div class="col" style="background-color: #6ea4f7"></div>
+        </div>
+    </ion-content>
+</ion-view>
